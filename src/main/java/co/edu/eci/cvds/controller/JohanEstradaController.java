@@ -28,11 +28,11 @@ public class JohanEstradaController {
 
     @GetMapping("/example/api")
     public String example(Model model) {
-        List<johanEstrada> anaDuranList = johanEstradaService.getAllJohanEstrada();
-        model.addAttribute("anaDuranList", anaDuranList);
-        return "anaDuran";
+        List<johanEstrada> johan = johanEstradaService.getAllJohanEstrada();
+        model.addAttribute("johan", johan);
+        return "example";
     }
-
+    
 
     @GetMapping("/example/api")
     public String exampleApi() {
