@@ -14,27 +14,20 @@
     <div class="px-4 py-5 my-5 text-center">
         <h1 class="centered" style="margin-bottom: 50px;">Preguntas</h1>
         <div class="col-lg-10 mx-auto">
-            <table id="employeeTable" class="table" style="margin-bottom: 50px;">
+            <table class="table" style="margin-bottom: 50px;">
                 <thead>
                 <tr>
-                    <th id="Pregunta">Pregunta</th>
-                    <th id="Respuesta">Respuesta</th>
-                    <th id="Argumento">Argumento</th>
+                    <th>Pregunta</th>
+                    <th>Respuesta</th>
+                    <th>Justificacion</th>
                 </tr>
                 </thead>
                 <tbody>
-                <!--                <tr>-->
-                <!--                    <td><img src="images/user.png" alt="user" width="25" height="25"></td>-->
-                <!--                    <td>1</td>-->
-                <!--                    <td>Juan</td>-->
-                <!--                    <td>Pérez</td>-->
-                <!--                    <td>Developer</td>-->
-                <!--                    <td>$50000</td>-->
-                <!--                    <td>-->
-                <!--                        <button type="button" class="btn btn-update">Update</button>-->
-                <!--                        <button type="button" class="btn btn-delete">Delete</button>-->
-                <!--                    </td>-->
-                <!--                </tr>-->
+                <tr th:each="j : ${johan}">
+                    <td><span th:text="${j.pregunta}">Pregunta</span></td>
+                    <td><span th:text="${j.respuesta}">Respuesta</span></td>
+                    <td><span th:text="${j.justificacion}">JustificaciON</span></td>
+                </tr>
                 </tbody>
             </table>
             <div class="d-grid gap-2 col-1 mx-auto">
