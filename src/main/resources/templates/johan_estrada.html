@@ -25,14 +25,11 @@
                 <tbody>
                 <tr th:each="j : ${johan}">
                     <td><span th:text="${j.pregunta}">Pregunta</span></td>
-                    <td><span th:text="${j.respuesta}">Respuesta</span></td>
-                    <td><span th:text="${j.justificacion}">JustificaciON</span></td>
+                    <td><span th:text="${j.letra}">Respuesta</span></td>
+                    <td><span th:text="${j.argumento}">Justificacion</span></td>
                 </tr>
                 </tbody>
             </table>
-            <div class="d-grid gap-2 col-1 mx-auto">
-                <button type="button" class="btn btn-new">New</button>
-            </div>
         </div>
         <div class="author">
             <p>Johan Estrada</p>
