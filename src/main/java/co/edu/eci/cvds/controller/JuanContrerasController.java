@@ -27,13 +27,10 @@ public class JuanContrerasController {
         return juanContrerasService.getAllJuanContreras();
     }
 
-    @GetMapping("/example")
-    public String example(Model model) {
-        return "juanContreras";
-    }
-
     @GetMapping("/example/api")
-    public String exampleApi() {
+    public String example(Model model) {
+        List<JuanContreras> juan = juanContrerasService.getAllJuanContreras();
+        model.addAttribute("juan", juan);
         return "juanContreras";
     }
 }
