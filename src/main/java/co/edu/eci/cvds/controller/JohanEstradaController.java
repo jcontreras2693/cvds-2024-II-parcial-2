@@ -26,10 +26,13 @@ public class JohanEstradaController {
         return johanEstradaService.getAllJohanEstrada();
     }
 
-    @GetMapping("/example")
+    @GetMapping("/example/api")
     public String example(Model model) {
-        return "example";
+        List<johanEstrada> anaDuranList = johanEstradaService.getAllJohanEstrada();
+        model.addAttribute("anaDuranList", anaDuranList);
+        return "anaDuran";
     }
+
 
     @GetMapping("/example/api")
     public String exampleApi() {

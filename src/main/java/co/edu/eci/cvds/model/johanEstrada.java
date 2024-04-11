@@ -25,6 +25,7 @@ public class johanEstrada {
         this.letra=letra;
         this.argumento=argumento;
     }
+
     public int getPregunta(){
         return this.pregunta;
     }

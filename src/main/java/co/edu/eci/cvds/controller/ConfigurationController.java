@@ -43,4 +43,5 @@ public class ConfigurationController {
         configurationService.addConfiguration(configuration);
         return configurationService.getAllConfigurations();
     }
+
 }
