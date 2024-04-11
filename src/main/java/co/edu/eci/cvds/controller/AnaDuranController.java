@@ -19,16 +19,17 @@ public class AnaDuranController {
     public AnaDuranController(AnaDuranService anaDuranService) {
         this.anaDuranService = anaDuranService;
     }
-
-    @GetMapping("/example")
-    public String example(Model model) {
-        return "example";
-    }
-
     @GetMapping("/example/api")
-    public String exampleApi() {
+    public String example(Model model) {
+        List<AnaDuran> anaDuranList = anaDuranService.getAllAnaDuran();
+        model.addAttribute("anaDuranList", anaDuranList);
         return "anaDuran";
     }
+
+//    @GetMapping("/example/api")
+//    public String exampleApi() {
+//        return "anaDuran";
+//    }
 
     @GetMapping("/example/api/configurations")
     @ResponseBody

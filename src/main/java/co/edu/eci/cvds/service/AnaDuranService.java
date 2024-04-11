@@ -16,6 +16,7 @@ public class AnaDuranService {
         this.anaDuranRepository = anaDuranRepository;
     }
 
+
     public AnaDuran addAnaDuran(AnaDuran anaDuran) {
         return anaDuranRepository.save(anaDuran);
     }

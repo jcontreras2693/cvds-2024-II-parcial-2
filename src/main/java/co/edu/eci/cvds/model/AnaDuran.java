@@ -13,13 +13,16 @@ public class AnaDuran {
     private String pregunta;
     @Column(name = "Respuesta")
     private String respuesta;
+    @Column(name = "Justificacion")
+    private String justificacion;
 
     public AnaDuran() {
     }
 
-    public AnaDuran(String pregunta, String respuesta) {
+    public AnaDuran(String pregunta, String respuesta, String justificacion) {
         this.pregunta = pregunta;
         this.respuesta = respuesta;
+        this.justificacion = justificacion;
     }
 
     public String getPregunta() {
@@ -37,7 +40,12 @@ public class AnaDuran {
     public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
     }
-
+    public String getJustificacion() {
+        return justificacion;
+    }
+    public String setJustificacion() {
+        return justificacion;
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
